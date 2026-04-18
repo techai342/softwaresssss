@@ -53,11 +53,10 @@ export function Testimonials() {
             className="flex items-center gap-6 bg-white/[0.03] border border-white/10 p-6 rounded-[28px] backdrop-blur-xl"
           >
              <div className="flex -space-x-3">
-               {[1, 2, 3, 4].map(i => (
-                 <div key={i} className="w-10 h-10 rounded-full border-2 border-[#050508] overflow-hidden grayscale hover:grayscale-0 transition-all cursor-pointer">
-                   <img src={`https://picsum.photos/seed/face${i}/50/50`} alt="User" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                 </div>
-               ))}
+               <div className="w-10 h-10 rounded-full border-2 border-[#050508] bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-300">AT</div>
+               <div className="w-10 h-10 rounded-full border-2 border-[#050508] bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-300">SJ</div>
+               <div className="w-10 h-10 rounded-full border-2 border-[#050508] bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-300">DC</div>
+               <div className="w-10 h-10 rounded-full border-2 border-[#050508] bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-300">SK</div>
                <div className="w-10 h-10 rounded-full border-2 border-[#050508] bg-cyan-500 flex items-center justify-center text-[10px] font-black text-black">+120</div>
              </div>
              <div>
