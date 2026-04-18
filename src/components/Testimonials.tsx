@@ -92,13 +92,8 @@ export function Testimonials() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-white/10 p-0.5 bg-gradient-to-br from-emerald-500/20 to-transparent">
-                    <img 
-                      src={t.image} 
-                      alt={t.name} 
-                      className="w-full h-full rounded-[14px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                      referrerPolicy="no-referrer"
-                    />
+                  <div className="relative w-14 h-14 rounded-2xl flex items-center justify-center border border-white/10 bg-slate-800 text-slate-300 font-bold text-lg">
+                    {t.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-sm tracking-wide">{t.name}</h4>
