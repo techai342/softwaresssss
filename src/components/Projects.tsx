@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, ExternalLink, X, Maximize2 } from 'lucide-react';
+import { ArrowRight, ExternalLink, X, Maximize2, Minimize2 } from 'lucide-react';
 
 const projectsData = [
   {
@@ -151,7 +151,10 @@ export function Projects() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
-            onClick={() => setSelectedProject(null)}
+            onClick={() => {
+              setSelectedProject(null);
+              setIsFullscreen(false);
+            }}
           >
             <motion.div
               initial={{ scale: 0.9, y: 50 }}
@@ -162,8 +165,8 @@ export function Projects() {
               }`}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Modal Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#121218] border-b border-white/10">
+              {/* Modal Header - Fixed at top */}
+              <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 bg-[#121218]/95 backdrop-blur-md border-b border-white/10">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-500/50" />
@@ -171,32 +174,40 @@ export function Projects() {
                     <div className="w-3 h-3 rounded-full bg-green-500/50" />
                   </div>
                   <span className="text-white text-sm font-medium ml-2">{selectedProject.title}</span>
-                  <span className="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded-full">{selectedProject.tag}</span>
+                  <span className="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded-full hidden sm:block">
+                    {selectedProject.tag}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors text-slate-400 hover:text-white"
+                    title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
                   >
-                    <Maximize2 className="w-4 h-4" />
+                    {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
                   </button>
                   <button
                     onClick={() => window.open(selectedProject.url, '_blank')}
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors text-slate-400 hover:text-white"
+                    title="Open in new tab"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </button>
                   <button
-                    onClick={() => setSelectedProject(null)}
-                    className="p-2 hover:bg-white/10 rounded-lg transition-colors text-slate-400 hover:text-white"
+                    onClick={() => {
+                      setSelectedProject(null);
+                      setIsFullscreen(false);
+                    }}
+                    className="p-2 hover:bg-red-500/20 rounded-lg transition-colors text-slate-400 hover:text-red-400"
+                    title="Close"
                   >
                     <X className="w-4 h-4" />
                   </button>
                 </div>
               </div>
 
-              {/* Iframe Preview */}
-              <div className="relative w-full h-[calc(100%-52px)] bg-white">
+              {/* Iframe Preview with padding top for header */}
+              <div className="relative w-full h-full pt-[52px] bg-white">
                 <iframe
                   src={selectedProject.url}
                   className="w-full h-full border-0"
@@ -206,7 +217,7 @@ export function Projects() {
                 />
                 
                 {/* Loading Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center bg-[#0a0a0f] pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-center bg-[#0a0a0f] pointer-events-none pt-[52px]">
                   <div className="text-center">
                     <div className="w-8 h-8 border-2 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin mx-auto mb-3"></div>
                     <p className="text-slate-400 text-sm">Loading {selectedProject.title}...</p>
