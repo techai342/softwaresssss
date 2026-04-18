@@ -8,7 +8,6 @@ const projectsData = [
     title: 'OpenBazaar',
     tag: 'E-COMMERCE',
     url: 'https://openbazaar.vercel.app/#/',
-    thumbnail: 'https://picsum.photos/seed/openbazaar/800/600',
     challenge: 'Traditional e-commerce platforms take huge cuts and limit seller control. The goal was to build a highly responsive marketplace that empowers sellers with total autonomy and fast transactions.',
     solution: 'We engineered a high-performance storefront using modern web technologies, ensuring lightning-fast load times, seamless checkout flows, and a totally immersive shopping experience.',
     features: [
@@ -23,7 +22,6 @@ const projectsData = [
     title: 'Food One',
     tag: 'FOOD TECH',
     url: 'https://food-one-jade.vercel.app/#/',
-    thumbnail: 'https://picsum.photos/seed/foodone/800/600',
     challenge: 'Users faced clunky interfaces and slow menu interactions on traditional local restaurant websites. The goal was to build a hyper-fast, stylized food ordering interface.',
     solution: 'Developed a high-performance ordering system with an intuitive UI. Features smooth menu navigation, dynamic category switching, and zero-latency user interactions.',
     features: [
@@ -38,7 +36,6 @@ const projectsData = [
     title: 'Unique Digital',
     tag: 'DIGITAL AGENCY',
     url: 'https://uniqe-digital.vercel.app/',
-    thumbnail: 'https://picsum.photos/seed/uniquedigital/800/600',
     challenge: 'The agency needed a digital storefront that wasn\'t just a static brochure, but a highly interactive, animated experience demonstrating their technical dominance.',
     solution: 'Built a visually stunning landing experience using advanced styling, dynamic layouts, scroll-linked animations, and rigorous performance optimizations.',
     features: [
@@ -51,13 +48,10 @@ const projectsData = [
 ];
 
 export function Projects() {
-  const [selectedProject, setSelectedProject] = useState<typeof projectsData[0] | null>(null);
-
   return (
     <section id="work" className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +66,6 @@ export function Projects() {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, idx) => (
             <motion.div
@@ -84,19 +77,15 @@ export function Projects() {
               onClick={() => window.open(project.url, '_blank')}
               className="group cursor-pointer relative p-[1px] rounded-[17px] shadow-2xl overflow-hidden transition-transform duration-500 hover:-translate-y-2 flex flex-col"
             >
-              {/* Spinning RGB Gradient Border */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-[conic-gradient(red,magenta,blue,cyan,green,yellow,red)] animate-[spin_4s_linear_infinite] opacity-30 group-hover:opacity-100 transition-opacity duration-500 blur-sm z-0" />
               
               <div className="relative z-10 flex flex-col bg-[#0a0a0f] rounded-2xl overflow-hidden h-full">
-                {/* Styled Project Preview */}
                 <div className="relative w-full aspect-[4/3] bg-black overflow-hidden rounded-t-2xl group/img">
-                  {/* Emulator Top Bar */}
                   <div className="flex items-center gap-1.5 px-3 py-2 bg-[#121218] border-b border-white/5">
                      <div className="w-2 h-2 rounded-full bg-red-500/50" />
                      <div className="w-2 h-2 rounded-full bg-amber-500/50" />
                      <div className="w-2 h-2 rounded-full bg-green-500/50" />
                   </div>
-                  {/* Content Preview Overlay */}
                   <div className="flex items-center justify-center h-full bg-gradient-to-br from-[#1a1a24] to-[#0a0a0f]">
                     <div className="text-center p-4">
                       <div className="text-cyan-500 font-mono text-[10px] mb-1 tracking-widest uppercase opacity-70">Live View</div>
@@ -111,7 +100,6 @@ export function Projects() {
                   </div>
                 </div>
 
-                {/* Card Footer Detail */}
                 <div className="p-6 bg-[#0e0e14] border-t border-white/5 flex-grow flex justify-between items-center group-hover:bg-[#12121a] transition-colors">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
