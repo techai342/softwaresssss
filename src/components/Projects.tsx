@@ -87,6 +87,7 @@ export function Projects() {
               {/* Spinning RGB Gradient Border */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-[conic-gradient(red,magenta,blue,cyan,green,yellow,red)] animate-[spin_4s_linear_infinite] opacity-30 group-hover:opacity-100 transition-opacity duration-500 blur-sm z-0" />
               
+              <div className="relative z-10 flex flex-col bg-[#0a0a0f] rounded-2xl overflow-hidden h-full">
                 {/* Styled Project Preview */}
                 <div className="relative w-full aspect-[4/3] bg-black overflow-hidden rounded-t-2xl group/img">
                   {/* Emulator Top Bar */}
@@ -110,25 +111,24 @@ export function Projects() {
                   </div>
                 </div>
 
-              {/* Card Footer Detail */}
-              <div className="p-6 bg-[#0e0e14] border-t border-white/5 flex-grow flex justify-between items-center group-hover:bg-[#12121a] transition-colors">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <span className="inline-block text-[11px] font-bold text-slate-400 tracking-widest uppercase border border-white/10 rounded-full px-3 py-1">
-                    {project.tag}
-                  </span>
+                {/* Card Footer Detail */}
+                <div className="p-6 bg-[#0e0e14] border-t border-white/5 flex-grow flex justify-between items-center group-hover:bg-[#12121a] transition-colors">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="inline-block text-[11px] font-bold text-slate-400 tracking-widest uppercase border border-white/10 rounded-full px-3 py-1">
+                      {project.tag}
+                    </span>
+                  </div>
+                  <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all text-slate-400 group-hover:text-cyan-400">
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
                 </div>
-                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all text-slate-400 group-hover:text-cyan-400">
-                  <ArrowRight className="w-5 h-5" />
-                </div>
-              </div>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
