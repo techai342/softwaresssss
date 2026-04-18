@@ -89,14 +89,28 @@ export function Projects() {
               
               <div className="relative z-10 flex flex-col bg-[#0a0a0f] rounded-2xl overflow-hidden h-full">
                 {/* Styled Placeholder Gradient for Live Preview */}
-                <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden rounded-t-2xl group/img">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent opacity-60" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="w-14 h-14 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center backdrop-blur-md border border-cyan-500/30 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-                      <ExternalLink className="w-6 h-6" />
-                    </div>
-                  </div>
-                </div>
+            // Replace lines 92-99 with this Interactive Emulator Frame:
+<div className="relative w-full aspect-[4/3] bg-black overflow-hidden rounded-t-2xl group/img">
+  {/* Emulator Top Bar */}
+  <div className="flex items-center gap-1.5 px-3 py-2 bg-[#121218] border-b border-white/5">
+     <div className="w-2 h-2 rounded-full bg-red-500/50" />
+     <div className="w-2 h-2 rounded-full bg-amber-500/50" />
+     <div className="w-2 h-2 rounded-full bg-green-500/50" />
+  </div>
+  {/* Content Preview Overlay */}
+  <div className="flex items-center justify-center h-full bg-gradient-to-br from-[#1a1a24] to-[#0a0a0f]">
+    <div className="text-center p-4">
+      <div className="text-cyan-500 font-mono text-xs mb-2 tracking-widest uppercase">Live View</div>
+      <div className="text-white font-bold text-sm">{project.title}</div>
+    </div>
+  </div>
+  
+  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/60 backdrop-blur-sm">
+    <div className="w-14 h-14 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center backdrop-blur-md border border-cyan-500/30 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+      <ExternalLink className="w-6 h-6" />
+    </div>
+  </div>
+</div>
 
               {/* Card Footer Detail */}
               <div className="p-6 bg-[#0e0e14] border-t border-white/5 flex-grow flex justify-between items-center group-hover:bg-[#12121a] transition-colors">
