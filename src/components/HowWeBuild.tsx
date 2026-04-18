@@ -162,12 +162,17 @@ export function HowWeBuild() {
               <WidgetCard title="Traffic" metric="850k" change="+5% Organic" delay={2.7} />
             </div>
 
+      // Replace lines 165-182 with this:
+
             <motion.div 
-               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 3.5, duration: 0.6 }}
+               initial={{ opacity: 0, y: 20 }} 
+               animate={{ opacity: 1, y: 0 }} // "whileInView" ki jagah "animate" use karein
+               transition={{ delay: 3.5, duration: 0.6 }}
                className="mt-auto pt-6 flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
-                <img src="https://picsum.photos/seed/saqibvisuals/50/50" width={32} height={32} alt="Muhammad Saqib" className="rounded-full border border-cyan-500/50 h-8 w-8" />
+                {/* Image ko CSS Gradient se replace kar diya taaki faltoo image na ho */}
+                <div className="w-8 h-8 rounded-full bg-cyan-900 border border-cyan-500/50 flex items-center justify-center font-bold text-xs text-cyan-400">MS</div>
                 <div>
                   <div className="text-xs font-bold text-white">Muhammad Saqib</div>
                   <div className="text-[10px] text-cyan-400 uppercase tracking-widest">CEO - Automation</div>
@@ -179,7 +184,19 @@ export function HowWeBuild() {
               </div>
             </motion.div>
             
-            {/* Simulation of Growth Graph */}
+            {/* Simulation of Growth Graph - Forceful Animation */}
+            <motion.div 
+               initial={{ opacity: 0, x: 20 }} 
+               animate={{ opacity: 1, x: 0 }} // "whileInView" ki jagah "animate" use karein
+               transition={{ delay: 3.8, duration: 0.6 }}
+               className="absolute right-6 bottom-32 bg-[#14141A] p-4 rounded-xl border border-white/10 shadow-xl"
+            >
+              <div className="text-[10px] uppercase font-bold text-slate-500 mb-1 tracking-widest">GROWTH</div>
+              <div className="text-xl font-bold text-white mb-2">+145%</div>
+              <div className="w-24 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <motion.div initial={{ width: 0 }} animate={{ width: "80%" }} transition={{ delay: 4.5, duration: 1 }} className="h-full bg-emerald-500" />
+              </div>
+            </motion.div>
             <motion.div 
                initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 3.8, duration: 0.6 }}
                className="absolute right-6 bottom-32 bg-[#14141A] p-4 rounded-xl border border-white/10 shadow-xl"
