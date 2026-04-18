@@ -14,7 +14,7 @@ export function WhatsAppChat() {
   }, []);
 
   const phoneNumber = '923478936242'; // Your WhatsApp number
-  const profilePic = 'https://ui-avatars.com/api/?name=Saqib+Visuals&background=0D8ABC&color=fff&size=200'; // Placeholder for your profile pic
+  const profilePic = 'https://ik.imagekit.io/shaban/SHABAN-1768573425069_nIPVZQOaT.jpg';
 
   const handleSend = () => {
     if (!message.trim()) return;
@@ -44,10 +44,8 @@ export function WhatsAppChat() {
                   <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/10">
                     <img 
                       src={profilePic}
-                      alt="Profile"
-                      width={40}
-                      height={40}
-                      className="object-cover w-10 h-10"
+                      alt="Saqib Visuals"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-[#202c33] rounded-full"></div>
