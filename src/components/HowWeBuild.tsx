@@ -178,6 +178,18 @@ export function HowWeBuild() {
                 <span className="text-[10px] text-emerald-400 uppercase tracking-widest font-mono">Compiling: Analytics</span>
               </div>
             </motion.div>
+            
+            {/* Simulation of Growth Graph */}
+            <motion.div 
+               initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 3.8, duration: 0.6 }}
+               className="absolute right-6 bottom-32 bg-[#14141A] p-4 rounded-xl border border-white/10 shadow-xl"
+            >
+              <div className="text-[10px] uppercase font-bold text-slate-500 mb-1 tracking-widest">GROWTH</div>
+              <div className="text-xl font-bold text-white mb-2">+145%</div>
+              <div className="w-24 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <motion.div initial={{ width: 0 }} whileInView={{ width: "80%" }} viewport={{ once: true }} transition={{ delay: 4.5, duration: 1 }} className="h-full bg-emerald-500" />
+              </div>
+            </motion.div>
           </div>
         </div>
         </div>
