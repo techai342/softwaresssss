@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Extra Security */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+  
+  body {
+    @apply bg-[#050508] text-slate-200 overflow-x-hidden;
+    /* Prevent layout shift during font loading */
+    font-display: swap;
+  }
+
+  input, textarea {
+    user-select: text !important;
+  }
+
+  /* Optimize images */
+  img {
+    @apply transition-opacity duration-300;
+  }
+}
+
+@layer utilities {
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -10;
+    }
+  }
+  .animate-dash {
+    animation: dash 1s linear infinite;
+  }
+
+  /* Hardware acceleration for smooth animations */
+  .gpu {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+  }
+
+  /* Custom scrollbar for a premium look */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050508;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e1e26;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+  }
+}
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+  --font-mono: var(--font-jetbrains-mono);
+}
