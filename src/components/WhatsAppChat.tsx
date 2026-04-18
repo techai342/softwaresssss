@@ -14,7 +14,7 @@ export function WhatsAppChat() {
   }, []);
 
   const phoneNumber = '923478936242'; // Your WhatsApp number
-  const profilePic = 'https://picsum.photos/seed/saqib/200/200'; // Placeholder for your profile pic
+  const profilePic = 'https://ui-avatars.com/api/?name=Saqib+Visuals&background=0D8ABC&color=fff&size=200'; // Placeholder for your profile pic
 
   const handleSend = () => {
     if (!message.trim()) return;
