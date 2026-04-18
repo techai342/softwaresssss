@@ -5,7 +5,7 @@ const TypewriterLine = ({ children, delay }: { children: React.ReactNode, delay:
   <motion.div
     initial={{ clipPath: 'inset(0 100% 0 0)' }}
     whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
-    viewport={{ once: true, margin: "-100px" }}
+    viewport={{ once: true, margin: "-20%" }}                
     transition={{ delay, duration: 0.6, ease: "linear" }}
     className="whitespace-nowrap"
   >
