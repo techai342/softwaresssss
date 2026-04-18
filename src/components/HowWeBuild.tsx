@@ -66,7 +66,9 @@ export function HowWeBuild() {
              <div className="w-3 h-3 rounded-full bg-amber-500/80" />
              <div className="w-3 h-3 rounded-full bg-green-500/80" />
           </div>
-          <div className="p-8 pt-6 overflow-x-auto text-sm font-mono leading-7 whitespace-nowrap relative z-10 min-h-[350px]">
+<div className="p-8 pt-6 overflow-x-auto text-sm font-mono leading-7 whitespace-nowrap relative z-10 min-h-[350px] opacity-100 transition-opacity duration-1000">
+  {/* Typewriter lines */}
+  ...
             <TypewriterLine delay={0.2}>
                <div><span className="text-fuchsia-500">const</span> <span className="text-amber-300">AnalyticsDB</span> = () <span className="text-fuchsia-500">=&gt;</span> {'{'}</div>
             </TypewriterLine>
