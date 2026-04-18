@@ -67,18 +67,18 @@ export function HowWeBuild() {
              <div className="w-3 h-3 rounded-full bg-green-500/80" />
           </div>
           <div className="p-8 pt-6 overflow-x-auto text-sm font-mono leading-7 relative z-10 min-h-[350px]">
-            <div className="text-fuchsia-500">const <span className="text-amber-300">AnalyticsDB</span> = () {'{'}</div>
-            <div className="pl-6 text-fuchsia-500">return (</div>
-            <div className="pl-12 text-slate-400">&lt;<span className="text-blue-400">Layout</span>&gt;</div>
-            <div className="pl-16 text-slate-400">&lt;<span className="text-blue-400">Sidebar</span> <span className="text-cyan-300">menu</span>=<span className="text-green-300">&apos;Analytics&apos;</span> /&gt;</div>
-            <div className="pl-16 text-slate-400">&lt;<span className="text-blue-400">Header</span> <span className="text-cyan-300">user</span>=<span className="text-green-300">&apos;Muhammad Saqib&apos;</span> /&gt;</div>
-            <div className="pl-16 text-slate-400">&lt;<span className="text-blue-400">Grid</span>&gt;</div>
-            <div className="pl-20 text-slate-400">&lt;<span className="text-blue-400">StatCard</span> <span className="text-cyan-300">type</span>=<span className="text-green-300">&apos;Revenue&apos;</span> /&gt;</div>
-            <div className="pl-20 text-slate-400">&lt;<span className="text-blue-400">StatCard</span> <span className="text-cyan-300">type</span>=<span className="text-green-300">&apos;Users&apos;</span> /&gt;</div>
-            <div className="pl-16 text-slate-400">&lt;/<span className="text-blue-400">Grid</span>&gt;</div>
-            <div className="pl-12 text-slate-400">&lt;/<span className="text-blue-400">Layout</span>&gt;</div>
-            <div className="pl-6">);</div>
-            <div>{'}'};</div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="text-fuchsia-500">const <span className="text-amber-300">AnalyticsDB</span> = () {'{'}</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }} className="pl-6 text-fuchsia-500">return (</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }} className="pl-12 text-slate-400">&lt;<span className="text-blue-400">Layout</span>&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="pl-16 text-slate-400">&lt;<span className="text-blue-400">Sidebar</span> <span className="text-cyan-300">menu</span>=<span className="text-green-300">&apos;Analytics&apos;</span> /&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.0 }} className="pl-16 text-slate-400">&lt;<span className="text-blue-400">Header</span> <span className="text-cyan-300">user</span>=<span className="text-green-300">&apos;Muhammad Saqib&apos;</span> /&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.2 }} className="pl-16 text-slate-400">&lt;<span className="text-blue-400">Grid</span>&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.4 }} className="pl-20 text-slate-400">&lt;<span className="text-blue-400">StatCard</span> <span className="text-cyan-300">type</span>=<span className="text-green-300">&apos;Revenue&apos;</span> /&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.6 }} className="pl-20 text-slate-400">&lt;<span className="text-blue-400">StatCard</span> <span className="text-cyan-300">type</span>=<span className="text-green-300">&apos;Users&apos;</span> /&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 1.8 }} className="pl-16 text-slate-400">&lt;/<span className="text-blue-400">Grid</span>&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 2.0 }} className="pl-12 text-slate-400">&lt;/<span className="text-blue-400">Layout</span>&gt;</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 2.2 }} className="pl-6">);</motion.div>
+            <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 2.4 }}>{'}'};</motion.div>
             <motion.div 
               initial={{ opacity: 0 }} 
               animate={{ opacity: [0, 1, 0] }} 
