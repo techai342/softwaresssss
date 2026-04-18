@@ -66,9 +66,7 @@ export function HowWeBuild() {
              <div className="w-3 h-3 rounded-full bg-amber-500/80" />
              <div className="w-3 h-3 rounded-full bg-green-500/80" />
           </div>
-<div className="p-8 pt-6 overflow-x-auto text-sm font-mono leading-7 whitespace-nowrap relative z-10 min-h-[350px] opacity-100 transition-opacity duration-1000">
-  {/* Typewriter lines */}
-  ...
+          <div className="p-8 pt-6 overflow-x-auto text-sm font-mono leading-7 whitespace-nowrap relative z-10 min-h-[350px]">
             <TypewriterLine delay={0.2}>
                <div><span className="text-fuchsia-500">const</span> <span className="text-amber-300">AnalyticsDB</span> = () <span className="text-fuchsia-500">=&gt;</span> {'{'}</div>
             </TypewriterLine>
@@ -105,10 +103,6 @@ export function HowWeBuild() {
             <TypewriterLine delay={3.5}>
                <div>{'}'};</div>
             </TypewriterLine>
-            <motion.div 
-              initial={{ opacity: 0 }} whileInView={{ opacity: [0, 1, 0] }} viewport={{ once: true }} transition={{ repeat: Infinity, duration: 0.8, delay: 3.8 }} 
-              className="w-2.5 h-[18px] bg-amber-400 mt-2" 
-            />
           </div>
 
           <div className="mt-auto bg-[#1a1a24] border-t border-white/5 py-2 px-4 flex justify-between text-xs text-slate-500 font-mono relative z-10">
