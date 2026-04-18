@@ -67,10 +67,14 @@ export default function App() {
         {/* Global Noise Texture with subtle movement */}
         <motion.div 
           animate={{ 
-            backgroundPosition: ["0% 0%", "100% 100%"] 
+            backgroundPositionY: ["0px", "40px"] 
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/1000/1000')] opacity-[0.03] mix-blend-overlay" 
+          className="absolute inset-0 opacity-[0.03] mix-blend-overlay"
+          style={{
+            backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
+            backgroundSize: "10px 10px"
+          }}
         />
         
         {/* Subtle Gradient Overlays */}

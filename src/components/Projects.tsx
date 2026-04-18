@@ -88,15 +88,8 @@ export function Projects() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-[conic-gradient(red,magenta,blue,cyan,green,yellow,red)] animate-[spin_4s_linear_infinite] opacity-30 group-hover:opacity-100 transition-opacity duration-500 blur-sm z-0" />
               
               <div className="relative z-10 flex flex-col bg-[#0a0a0f] rounded-2xl overflow-hidden h-full">
-                {/* Image Thumbnail for Live Preview (More reliable on Vercel) */}
-                <div className="relative w-full aspect-[4/3] bg-slate-900 overflow-hidden rounded-t-2xl group/img">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110 opacity-70 group-hover:opacity-100"
-                    referrerPolicy="no-referrer"
-                  />
-                  {/* Overlays */}
+                {/* Styled Placeholder Gradient for Live Preview */}
+                <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden rounded-t-2xl group/img">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent opacity-60" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="w-14 h-14 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center backdrop-blur-md border border-cyan-500/30 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
