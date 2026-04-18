@@ -103,6 +103,12 @@ export function HowWeBuild() {
             <TypewriterLine delay={3.5}>
                <div>{'}'};</div>
             </TypewriterLine>
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: [0, 1, 0] }} 
+              transition={{ repeat: Infinity, duration: 0.8 }} 
+              className="w-2.5 h-[18px] bg-amber-400 mt-2" 
+            />
           </div>
 
           <div className="mt-auto bg-[#1a1a24] border-t border-white/5 py-2 px-4 flex justify-between text-xs text-slate-500 font-mono relative z-10">
