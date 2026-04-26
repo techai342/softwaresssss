@@ -68,11 +68,11 @@ const teamMembers = [
   },
   {
     id: "iqra",
-    name: "Iqra Mushtaq",
+    name: "MEHAK JUTT",
     role: "SENIOR SOFTWARE ENGINEER",
     pillIcon: <GraduationCap className="w-4 h-4" />,
     pillText: "Udemy Certified Engineer",
-    image: "https://ik.imagekit.io/19imy4f1u/lite_1776444770280_BUk4HB-Fh.png",
+    image: "https://ik.imagekit.io/19imy4f1u/lite_1777212616602_7r8xj0CHzo.png",
     bio: "A certified software engineer and creative powerhouse. I bridge the gap between technical development and visual storytelling, specializing in Shopify ecosystems, high-impact graphic design, and data-driven digital marketing strategies.",
     skills: [
       {
