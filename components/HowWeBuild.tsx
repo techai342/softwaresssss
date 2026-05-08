@@ -6,9 +6,8 @@ import Image from 'next/image';
 
 const TypewriterLine = ({ children, delay }: { children: React.ReactNode; delay: number }) => (
   <motion.div
-    initial={{ width: 0, opacity: 0.7 }}
-    whileInView={{ width: '100%', opacity: 1 }}
-    viewport={{ once: true, margin: '-100px' }}
+    initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0.7 }}
+    animate={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
     transition={{ delay, duration: 0.65, ease: 'easeOut' }}
     className="overflow-hidden whitespace-nowrap"
   >
