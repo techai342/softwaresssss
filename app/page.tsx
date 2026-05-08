@@ -14,6 +14,7 @@ import { Preloader } from '@/components/Preloader';
 import { ModernStack } from '@/components/ModernStack';
 import { BackendRoadmap } from '@/components/BackendRoadmap';
 import { Projects } from '@/components/Projects';
+import { EmbedPreview } from '@/components/EmbedPreview';
 import { Pricing } from '@/components/Pricing';
 import { Process } from '@/components/Process';
 import { Team } from '@/components/Team';
@@ -93,6 +94,7 @@ export default function LandingPage() {
         <Services />
         <WhyUs />
         <Projects />
+        <EmbedPreview />
         <Testimonials />
         <Pricing />
         <Process />
