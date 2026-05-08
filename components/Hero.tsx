@@ -6,10 +6,10 @@ import Magnetic from './Magnetic';
 
 const TypewriterLine = ({ children, delay }: { children: React.ReactNode, delay: number }) => (
   <motion.div
-    initial={{ clipPath: 'inset(0 100% 0 0)' }}
-    animate={{ clipPath: 'inset(0 0% 0 0)' }}
-    transition={{ delay, duration: 0.8, ease: "linear" }}
-    className="whitespace-nowrap"
+    initial={{ width: 0, opacity: 0 }}
+    animate={{ width: 'fit-content', opacity: 1 }}
+    transition={{ delay, duration: 0.8, ease: 'linear' }}
+    className="whitespace-nowrap overflow-hidden"
   >
     {children}
   </motion.div>
