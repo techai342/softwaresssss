@@ -3,15 +3,12 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 import { 
   Code2, 
-  ShoppingCart, 
   Palette, 
   Video, 
   Share2, 
-  LineChart, 
   BarChart, 
   Layout, 
   Sparkles, 
-  GraduationCap 
 } from 'lucide-react';
 
 const teamMembers = [
@@ -20,7 +17,7 @@ const teamMembers = [
     name: "Muhammad Saqib",
     role: "CREATIVE VISUAL ARTIST",
     pillIcon: <Sparkles className="w-4 h-4" />,
-    pillText: "Founder of Saqib Visuals",
+    pillText: "Owner",
     image: "https://ik.imagekit.io/shaban/SHABAN-1768573425069_nIPVZQOaT.jpg",
     bio: "I am a passionate and motivated learner with a strong interest in modern technology and creativity. I enjoy exploring new tools, building digital solutions, and creating engaging visual content. I believe in continuous learning and using technology to create meaningful digital experiences.",
     skills: [
@@ -68,59 +65,6 @@ const teamMembers = [
       }
     ]
   },
-  {
-    id: "iqra",
-    name: "MEHAK JUTT",
-    role: "SENIOR SOFTWARE ENGINEER",
-    pillIcon: <GraduationCap className="w-4 h-4" />,
-    pillText: "Udemy Certified Engineer",
-    image: "https://ik.imagekit.io/19imy4f1u/lite_1777212169111_i8WFJZHIma.jpeg",
-    bio: "A certified software engineer and creative powerhouse. I bridge the gap between technical development and visual storytelling, specializing in Shopify ecosystems, high-impact graphic design, and data-driven digital marketing strategies.",
-    skills: [
-      {
-        icon: <Code2 className="text-cyan-400 w-5 h-5" />,
-        title: "Web Development",
-        badge: "CERTIFIED ENGINEER",
-        badgeColor: "#22d3ee",
-        desc: "Full-stack web solutions & modern architecture."
-      },
-      {
-        icon: <ShoppingCart className="text-green-400 w-5 h-5" />,
-        title: "Shopify Dev",
-        badge: "STORE EXPERT",
-        badgeColor: "#4ade80",
-        desc: "Custom themes, apps & e-commerce growth."
-      },
-      {
-        icon: <Palette className="text-orange-400 w-5 h-5" />,
-        title: "Graphic Design",
-        badge: "CREATIVE LEAD",
-        badgeColor: "#fb923c",
-        desc: "Brand identity, logos, UI assets & print."
-      },
-      {
-        icon: <Video className="text-purple-400 w-5 h-5" />,
-        title: "Video Editing",
-        badge: "MOTION ARTIST",
-        badgeColor: "#c084fc",
-        desc: "Professional editing, VFX & storytelling."
-      },
-      {
-         icon: <Share2 className="text-amber-500 w-5 h-5" />,
-         title: "Social Media",
-         badge: "MANAGEMENT",
-         badgeColor: "#f59e0b",
-         desc: "Content strategy & audience building."
-      },
-      {
-         icon: <LineChart className="text-blue-400 w-5 h-5" />,
-         title: "Digital Marketing",
-         badge: "MARKETING EXPERT",
-         badgeColor: "#60a5fa",
-         desc: "SEO, Ad campaigns & conversion."
-      }
-    ]
-  }
 ];
 
 export function Team() {
@@ -140,13 +84,13 @@ export function Team() {
         className="text-center mb-20 relative z-10"
       >
         <div className="inline-block border border-fuchsia-500/30 rounded-full px-4 py-1 mb-6 bg-fuchsia-500/5">
-           <span className="text-[10px] font-bold uppercase tracking-[4px] text-fuchsia-400">THE EXPERTS</span>
+           <span className="text-[10px] font-bold uppercase tracking-[4px] text-fuchsia-400">THE OWNER</span>
         </div>
         <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tight">
-          Meet the <span className="text-cyan-400">Elite</span> <span className="text-fuchsia-500">Team</span>
+          Meet the <span className="text-cyan-400">Owner</span>
         </h2>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-          Bridging the gap between complex code, creative design, and business growth.
+          Led by Saqib with a focused vision for high-quality digital experiences.
         </p>
       </motion.div>
 
