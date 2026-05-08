@@ -1,39 +1,32 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Github, Linkedin, Twitter, Youtube, Mail, MessageCircle } from 'lucide-react';
+import { SiFacebook, SiInstagram, SiTiktok, SiWhatsapp, SiSnapchat } from 'react-icons/si';
 
-const channels = [
-  { label: 'GitHub', handle: '@tech-team', icon: <Github className="w-5 h-5" />, href: '#' },
-  { label: 'LinkedIn', handle: '/company/ai-studio', icon: <Linkedin className="w-5 h-5" />, href: '#' },
-  { label: 'X / Twitter', handle: '@ai_studio', icon: <Twitter className="w-5 h-5" />, href: '#' },
-  { label: 'YouTube', handle: 'AI Studio Labs', icon: <Youtube className="w-5 h-5" />, href: '#' },
-  { label: 'Email', handle: 'hello@example.com', icon: <Mail className="w-5 h-5" />, href: 'mailto:hello@example.com' },
-  { label: 'Community', handle: 'Discord / Slack', icon: <MessageCircle className="w-5 h-5" />, href: '#' },
+const socialLinks = [
+  { name: 'Facebook', icon: SiFacebook, href: 'https://web.facebook.com/muhammad.saqib.718278' },
+  { name: 'Instagram', icon: SiInstagram, href: 'https://www.instagram.com/mr_saqib242' },
+  { name: 'TikTok', icon: SiTiktok, href: 'https://www.tiktok.com/@mr_saqib_242' },
+  { name: 'WhatsApp', icon: SiWhatsapp, href: 'https://wa.me/923478936242' },
+  { name: 'Snapchat', icon: SiSnapchat, href: 'https://www.snapchat.com/add/mrsaqib242' },
 ];
 
 export function SocialGrid() {
   return (
-    <section className="py-24 px-6 border-t border-white/5 bg-white/[0.01]">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Stay connected.</h2>
-          <p className="text-slate-400 mt-3">Follow updates, launches, and deep-dive engineering notes.</p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {channels.map((channel, i) => (
+    <section className="py-20 bg-[#050508] relative z-10 border-b border-white/[0.05]">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h3 className="text-white font-bold text-2xl mb-12">Connect With Me</h3>
+        <div className="flex flex-wrap items-center justify-center gap-6">
+          {socialLinks.map((social) => (
             <motion.a
-              key={channel.label}
-              href={channel.href}
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.06 }}
-              viewport={{ once: true }}
-              className="group rounded-2xl border border-white/10 bg-[#0b0b10] p-5 hover:border-cyan-500/40 hover:bg-[#10101a] transition-colors"
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ y: -5, scale: 1.1 }}
+              className="w-16 h-16 rounded-full bg-[#12121A] flex items-center justify-center text-white border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-950/20 transition-all duration-300 shadow-lg"
             >
-              <div className="flex items-center gap-3 text-cyan-300 mb-3">{channel.icon}<span className="text-white font-medium">{channel.label}</span></div>
-              <p className="text-slate-400 group-hover:text-slate-300 text-sm">{channel.handle}</p>
+              {social.icon ? <social.icon className="w-7 h-7" /> : null}
             </motion.a>
           ))}
         </div>
