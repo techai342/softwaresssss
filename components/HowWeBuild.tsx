@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 const TypewriterLine = ({ children, delay }: { children: React.ReactNode, delay: number }) => (
   <motion.div
-    initial={{ opacity: 0, x: -8 }}
-    whileInView={{ opacity: 1, x: 0 }}
+    initial={{ clipPath: 'inset(0 100% 0 0)' }}
+    whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
     viewport={{ once: true, margin: "-100px" }}
-    transition={{ delay, duration: 0.45, ease: "easeOut" }}
+    transition={{ delay, duration: 0.6, ease: "linear" }}
     className="whitespace-nowrap"
   >
     {children}
