@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Crown, Star, CheckCircle2, Code2, Terminal, Database, ArrowRight } from 'lucide-react';
 import Magnetic from './Magnetic';
@@ -16,6 +17,23 @@ const TypewriterLine = ({ children, delay }: { children: React.ReactNode, delay:
 );
 
 export function Hero() {
+  const typedText = 'Dominance.';
+  const [visibleChars, setVisibleChars] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setVisibleChars((prev) => {
+        if (prev >= typedText.length) {
+          window.clearInterval(timer);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 120);
+
+    return () => window.clearInterval(timer);
+  }, [typedText.length]);
+
   return (
     <section id="home" className="relative min-h-[100svh] pt-32 pb-20 px-6 max-w-[1400px] mx-auto flex flex-col justify-center">
       {/* Top Badge */}
@@ -66,10 +84,21 @@ export function Hero() {
               initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }} className="block text-slate-300"
             >Digital</motion.span>
             
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }} 
-              className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 drop-shadow-[0_0_30px_rgba(34,211,238,0.3)] pb-2"
-            >Dominance.</motion.span>
+            <motion.span
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
+              className="relative block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 drop-shadow-[0_0_30px_rgba(34,211,238,0.3)] pb-2"
+            >
+              {typedText.slice(0, visibleChars)}
+              <motion.span
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{ repeat: Infinity, duration: 0.8 }}
+                className="ml-1 inline-block text-cyan-300"
+              >
+                |
+              </motion.span>
+            </motion.span>
           </h1>
 
           <motion.p 
