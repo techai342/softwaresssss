@@ -45,7 +45,17 @@ export function HowWeBuild() {
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
           className="text-slate-400 text-lg max-w-2xl mx-auto"
         >
-          Watch your vision come to life. We write clean code that instantly transforms into powerful, responsive interfaces.
+          Watch your vision come to life. Our{' '}
+          <motion.span
+            initial={{ width: 0 }}
+            whileInView={{ width: '6.2ch' }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 1.1, ease: 'easeOut' }}
+            className="inline-block align-bottom overflow-hidden whitespace-nowrap text-cyan-300 font-semibold border-r-2 border-cyan-400"
+          >
+            coding
+          </motion.span>{' '}
+          turns ideas into powerful, responsive interfaces.
         </motion.p>
       </div>
 
