@@ -26,6 +26,47 @@ import { WhatsAppChat } from '@/components/WhatsAppChat';
 
 export default function LandingPage() {
   const { scrollYProgress } = useScroll();
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'MrSaqib',
+    url: 'https://techai.zone.id/',
+    description: 'Modern website development, branding, and SEO solutions from Pakistan.',
+    inLanguage: 'en',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://techai.zone.id/?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Muhammad Saqib',
+    alternateName: ['MrSaqib', 'Saqib242', 'mr_saqib_242'],
+    url: 'https://techai.zone.id/',
+    jobTitle: 'Creative Developer',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'PK',
+      addressRegion: 'Punjab',
+      addressLocality: 'Faisalabad',
+    },
+    knowsAbout: [
+      'Next.js',
+      'React',
+      'Web Development',
+      'SEO',
+      'UI UX Design',
+      'Branding',
+      'Creative Development',
+      'Digital Marketing',
+      'Frontend Development',
+      'Portfolio Websites',
+    ],
+  };
+
   return (
     <div className="bg-[#050508] min-h-screen text-slate-200 font-sans overflow-x-hidden selection:bg-cyan-500/30">
       
@@ -81,6 +122,16 @@ export default function LandingPage() {
       </div>
 
       {/* Modern High-Performance Header */}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+
       <Header />
       
       <main className="relative z-10">

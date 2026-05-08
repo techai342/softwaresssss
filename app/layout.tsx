@@ -20,33 +20,52 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Saqib Visuals | Digital Agency & Engineering',
-  description: 'Scalable architectures, AI integration, and modern web technologies for businesses that demand engineering precision.',
-  keywords: ['Digital Agency', 'Engineering', 'Web Development', 'AI Integration', 'Visual Design', 'High Performance'],
-  authors: [{ name: 'Saqib Visuals' }],
-  creator: 'Saqib Visuals',
-  publisher: 'Saqib Visuals',
+  metadataBase: new URL('https://techai.zone.id/'),
+  title: {
+    default: 'MrSaqib | Creative Developer Pakistan',
+    template: '%s | MrSaqib',
+  },
+  description:
+    'Muhammad Saqib (Saqib242 / MrSaqib) is a creative developer and visual artist from Pakistan building SEO-optimized Next.js and React websites, branding systems, and modern UI/UX experiences.',
+  keywords: [
+    'MrSaqib',
+    'Saqib242',
+    'Muhammad Saqib',
+    'Creative Developer Pakistan',
+    'Web Developer Faisalabad',
+    'Web Developer Gujranwala',
+    'Gojra Web Developer',
+    'Next.js Developer Pakistan',
+    'React Developer Pakistan',
+    'SEO Expert Pakistan',
+    'UI UX Designer Pakistan',
+    'Website Designer Faisalabad',
+    'Digital Creator Pakistan',
+    'Portfolio Website Developer',
+  ],
+  authors: [{ name: 'Muhammad Saqib', url: 'https://techai.zone.id/' }],
+  creator: 'Muhammad Saqib',
+  publisher: 'MrSaqib',
+  alternates: {
+    canonical: 'https://techai.zone.id/',
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  icons: {
-    icon: 'https://picsum.photos/seed/sv-logo/32/32',
-    shortcut: 'https://picsum.photos/seed/sv-logo/32/32',
-    apple: 'https://picsum.photos/seed/sv-logo/180/180',
-  },
   openGraph: {
-    title: 'Saqib Visuals | Digital Agency & Engineering',
-    description: 'We build high-performance digital ecosystems for the future.',
+    title: 'MrSaqib | Creative Developer Pakistan',
+    description:
+      'Portfolio of Muhammad Saqib (Saqib242): Next.js, React, UI/UX, branding, and SEO optimized digital experiences.',
     url: 'https://techai.zone.id/',
-    siteName: 'Saqib Visuals',
+    siteName: 'MrSaqib',
     images: [
       {
-        url: 'https://picsum.photos/seed/agency-preview/1200/630',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Saqib Visuals Preview',
+        alt: 'MrSaqib - Creative Developer Pakistan',
       },
     ],
     locale: 'en_US',
@@ -54,9 +73,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Saqib Visuals | Digital Agency',
-    description: 'Scalable architectures and modern web technologies.',
-    images: ['https://picsum.photos/seed/agency-preview/1200/630'],
+    title: 'MrSaqib | Creative Developer Pakistan',
+    description: 'Portfolio of Muhammad Saqib aka Saqib242.',
+    images: ['/og-image.jpg'],
+    creator: '@mrsaqib242',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
