@@ -3,7 +3,8 @@
 import { motion } from 'motion/react';
 
 export function EmbedPreview() {
-  const embedCode = `<iframe src="https://your-project-url.com" title="Project Preview" width="100%" height="600" style="border:0; border-radius:16px;" loading="lazy"></iframe>`;
+  const previewUrl = "https://www.wikipedia.org/";
+  const embedCode = `<iframe src="${previewUrl}" title="Project Preview" width="100%" height="600" style="border:0; border-radius:16px;" loading="lazy"></iframe>`;
 
   return (
     <section id="embed-preview" className="py-24 px-6 md:px-12 lg:px-20">
@@ -33,7 +34,7 @@ export function EmbedPreview() {
             <p className="text-slate-300 text-sm mb-3">Live Preview</p>
             <div className="w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-black/30">
               <iframe
-                src="https://your-project-url.com"
+                src={previewUrl}
                 title="Embedded Project Preview"
                 className="w-full h-full"
                 loading="lazy"

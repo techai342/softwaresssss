@@ -4,15 +4,15 @@ import { motion } from 'motion/react';
 import { BarChart3, ShoppingCart, Users, Search } from 'lucide-react';
 import Image from 'next/image';
 
-const TypewriterLine = ({ children, delay }: { children: React.ReactNode, delay: number }) => (
+const TypewriterLine = ({ children, delay }: { children: React.ReactNode; delay: number }) => (
   <motion.div
-    initial={{ clipPath: 'inset(0 100% 0 0)' }}
-    whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ delay, duration: 0.6, ease: "linear" }}
-    className="whitespace-nowrap"
+    initial={{ width: 0, opacity: 0.7 }}
+    whileInView={{ width: '100%', opacity: 1 }}
+    viewport={{ once: true, margin: '-100px' }}
+    transition={{ delay, duration: 0.65, ease: 'easeOut' }}
+    className="overflow-hidden whitespace-nowrap"
   >
-    {children}
+    <div className="inline-block min-w-max">{children}</div>
   </motion.div>
 );
 
@@ -107,7 +107,7 @@ export function HowWeBuild() {
                <div>{'}'};</div>
             </TypewriterLine>
             <motion.div 
-              initial={{ opacity: 0 }} whileInView={{ opacity: [0, 1, 0] }} viewport={{ once: true }} transition={{ repeat: Infinity, duration: 0.8, delay: 3.8 }} 
+              initial={{ opacity: 0 }} whileInView={{ opacity: [0, 1, 0] }} viewport={{ once: true }} transition={{ repeat: Infinity, duration: 0.8, repeatType: 'loop' }} 
               className="w-2.5 h-[18px] bg-amber-400 mt-2" 
             />
           </div>
