@@ -179,7 +179,7 @@ export function HowWeBuild() {
                className="mt-auto pt-6 flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
-                <Image src="https://picsum.photos/seed/saqibvisuals/50/50" width={32} height={32} alt="Muhammad Saqib" className="rounded-full border border-cyan-500/50" unoptimized referrerPolicy="no-referrer" />
+                <Image src="https://ik.imagekit.io/shaban/SHABAN-1768573425069_nIPVZQOaT.jpg" width={32} height={32} alt="Muhammad Saqib" className="rounded-full border border-cyan-500/50" unoptimized referrerPolicy="no-referrer" />
                 <div>
                   <div className="text-xs font-bold text-white">Muhammad Saqib</div>
                   <div className="text-[10px] text-cyan-400 uppercase tracking-widest">CEO - Automation</div>
