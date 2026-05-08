@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const siteUrl = 'https://techai.zone.id';
+const siteUrl = 'https://saqibvisual.vercel.app';
 
 export default function robots(): MetadataRoute.Robots {
   return {
