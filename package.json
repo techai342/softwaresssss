@@ -7,7 +7,7 @@
     "build": "NEXT_TELEMETRY_DISABLED=1 next build --no-lint",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "command -v next-sitemap >/dev/null 2>&1 && next-sitemap || echo 'next-sitemap not installed; skipping sitemap generation'"
   },
   "dependencies": {
     "@google/genai": "^1.17.0",
