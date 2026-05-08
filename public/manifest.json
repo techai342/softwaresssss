@@ -1,0 +1,21 @@
+{
+  "name": "MrSaqib - Creative Developer Pakistan",
+  "short_name": "MrSaqib",
+  "description": "SEO-optimized portfolio and API-ready web engineering services in Faisalabad and Gujranwala.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#050508",
+  "icons": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/og-image.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
